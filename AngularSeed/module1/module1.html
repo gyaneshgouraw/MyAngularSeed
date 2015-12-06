@@ -1,0 +1,90 @@
+<style>
+
+</style>
+<div class="" ng-show="true">
+  Gyanesh Gouraw
+    <hr>
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+      <li class="active">
+        <a href="/#users" role="tab" data-toggle="tab">
+              <i class="glyphicon glyphicon-user"></i>
+              Active Tab
+        </a>
+      </li>           
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="users">            
+            <div class="panel panel-default">
+                <div class="panel-body">    
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>ID</th>
+                                    <th width="200">Corporate</th>
+                                    <th width="200">Package</th>
+                                    <th width="160">Status
+                                    </th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th style="width:80px;" class="text-right">Quick Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  ng-click="openTab(appointment.hashTagFilters.CustomerName,appointment.requestId, $event)">                                    
+                                    <td>Test1</td>
+                                    <td>Test1</td>
+                                    <td data-toggle="tooltip">Test1</td>
+                                    <td>Test1</td>
+                                    <td> Test1</td>
+                                    <td>Test1</td>
+                                    <td>Test1</td>
+                                    <td class="text-right">Test1</td>
+                                    
+                                </tr>                               
+                            </tbody>
+                        </table>
+                        <pagination 
+                                data-boundary-links="true" 
+                                data-num-pages="noOfPages" 
+                                data-current-page="currentPage" 
+                                max-size="maxSize" 
+                                class="pagination-small pagination-centered" 
+                                data-previous-text="&laquo;" 
+                                data-next-text="&raquo;">
+                        </pagination>            
+                    </div>  
+                </div>
+            </div>            
+        </div>        
+    </div>
+   
+
+</div>
+<div class="no-active-appointments" ng-show="false">
+    <input type="text" id="searchQuery" class="form-control" placeholder="Enter claim id or customer name to search"  ng-model="search" ng-enter="SearchAppointments()">
+    <input id="search-button" type="button"  class="btn btn-primary" value="Search" ng-click="SearchAppointments()">
+    <div class="bs-callout bs-callout-info">        
+        <h4>No active appointments found.</h4>
+        <p ng-show="!searchResults">This provider doesn't seem to have any active appointments.</p>
+        <p ng-show="searchResults">We couldn't find an appointment matching your search criteria. Could you please try again with other search criteria?</p>
+        <button class="btn btn-primary text-center" ng-click="loadAppointments()" ng-show="searchResults">Show all appointments</button>
+    </div>
+</div>
+<div class="no-active-appointments" ng-show="false">
+    <div class="bs-callout bs-callout-info">        
+        <h4>Fetching active appointments...</h4>
+        <p ng-show="!searchResults">This could take some time depending on your internet speed.</p>         
+    </div>
+</div>
+<script>
+  $(function(){
+    $('#modifiedDate').datetimepicker({
+        "format":'Y/m/d H:i',
+        "step":30,
+        "minTime":"08:00",
+        "maxTime":"10:00"
+    }); 
+  })
+</script>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="title">Angular  | Seed Project</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="resources/images/fancybox_overlay.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link href="resources/css/default.css" rel="stylesheet">
+    <link href="resources/css/main.css" rel="stylesheet">
+    <link href="resources/css/styles.css" rel="stylesheet">
+
+    <link href="resources/css/angular-block-ui.css" rel="stylesheet" />
+    <link href="resources/css/bootstrap.no-icons.min.css" rel="stylesheet" />
+    <link href="resources/css/font-awesome.css" rel="stylesheet" />
+    <link href="resources/css/jquery.datetimepicker.css" rel="stylesheet" />
+    <link href="resources/css/typeaheadjs.css" rel="stylesheet" />
+    <link href="resources/css/jquery.fileupload-ui.css" rel="stylesheet">
+    <link href="resources/css/jquery-ui.css" id="theme" rel="stylesheet">   
+    <link href="resources/css/maya_styles.css" id="theme" rel="stylesheet">      
+</head>
+<style>
+    .no-login{
+      display: none;
+    }
+    .login{
+      display: block;
+    }
+  </style>      
+
+<body ng-app="providerApp" ng-controller="sharedController">
+    <div class="header no-login">
+        <div class="brand-wrap pull-left">
+            <h3 class="brand text-muted pull-left"><img src="resources/images/fancybox_overlay.png" alt=""></h3>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="sidebar" class="collapse navbar-collapse">
+        </div>
+        <div>
+            <div ng-view></div>
+        </div>
+    </div>
+    <div class="footer no-login">
+        <p>© Copyright - Gyanesh Gouraw</p>
+    </div>
+    <!-- Required 3rd party JS resources -->
+    <script src="resources/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="resources/js/vendor/angular.min.js"></script>
+    <script src="resources/js/vendor/angular-route.min.js"></script>
+    <script src="resources/js/vendor/angular-ui-router.js"></script>
+    <script src="resources/js/vendor/angular-cookies.js"></script>
+    <script src="resources/js/vendor/ng-table.js"></script>
+    <script src="resources/js/vendor/angulartics.js"></script>
+    <script src="resources/js/vendor/angulartics-ga.js"></script>
+
+    <script src="resources/js/vendor/bootstrap.min.js"></script>
+    <script src="resources/js/vendor/angular-block-ui.js"></script>
+    <script src="resources/js/vendor/date.js"></script>
+    <script src="resources/js/vendor/jquery.fancybox.js"></script>
+    <script src="resources/js/vendor/jquery.md5.js"></script>
+    <script src="resources/js/vendor/jquery.tmpl.min.js"></script>
+    <script src="resources/js/vendor/jquery.iframe-transport.js"></script>
+    <script src="resources/js/vendor/jquery.form.min.js"></script>
+    <script src="resources/js/vendor/ui-bootstrap-tpls-0.2.0.js"></script>
+    <script src="resources/js/vendor/jquery.datetimepicker.js"></script>
+    <script src="resources/js/vendor/typeahead.bundle.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places"></script>
+
+    <!-- Common resources and routing files -->
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+    <script src="resources/js/directives.js"></script>
+    <script src="resources/js/filters.js"></script>
+    <script src="resources/js/services.js"></script>
+
+    <!-- Controllers -->
+    <script src="module1/module1Controller.js"></script>
+    <script src="shared/sharedController.js"></script>
+
+
+
+
+</html>
